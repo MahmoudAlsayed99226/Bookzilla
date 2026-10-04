@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styelhome.css">
+    <link rel="stylesheet" href="./bootstrap.min.css.css">
+    <title>Bookzilla</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg custom-transparent">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Bookzilla</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./booking.html">Booking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./movies.html">Movies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./premium.html">Premium</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./profile.html">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./signin.html">Sign In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./createaccount.html">Create Account</a>
+        </li>
+        
+       
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="auth-wrapper">
+  <div class="auth-card">
+    <h2 class="auth-title">Create Account</h2>
+    <p class="auth-subtitle">Join Bookzilla to book your favorite movies instantly</p>
+
+    <form class="needs-validation" novalidate>
+      
+      <!-- Full Name -->
+      <div class="mb-3">
+        <label for="fullName" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="fullName" placeholder="John Doe" required>
+      </div>
+
+      <!-- Username -->
+      <div class="mb-3">
+        <label for="signUpUsername" class="form-label">Username</label>
+        <div class="input-group">
+          <span class="input-group-text">@</span>
+          <input type="text" class="form-control" id="signUpUsername" placeholder="johndoe" required>
+        </div>
+      </div>
+
+      <!-- Email Address -->
+      <div class="mb-3">
+        <label for="signUpEmail" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="signUpEmail" placeholder="name@example.com" required>
+      </div>
+
+      <!-- Password -->
+      <div class="mb-3">
+        <label for="signUpPassword" class="form-label">Password</label>
+        <input type="password" class="form-control" id="signUpPassword" placeholder="Create a strong password" required>
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="mb-3">
+        <label for="confirmPassword" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="confirmPassword" placeholder="Repeat your password" required>
+      </div>
+
+      <!-- Terms & Conditions Checkbox -->
+      <div class="mb-4 form-check d-flex align-items-center gap-2 ps-0">
+        <input type="checkbox" class="form-check-input ms-0" id="termsCheck" required>
+        <label class="form-check-label mb-0" for="termsCheck">
+          I agree to the <a href="#" class="auth-link">Terms & Conditions</a>
+        </label>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-auth-submit w-100 mb-3">Create Account</button>
+
+      <!-- Redirect to Sign In -->
+      <p class="text-center mb-0 text-muted" style="font-size: 0.9rem;">
+        Already have an account? <a href="./signin.html" class="auth-link font-weight-bold">Sign In</a>
+      </p>
+
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+
+<script src="./bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,571 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html{
+    height: 100%;
+}
+body{
+    background: linear-gradient(135deg,#1c307f,#ffb347);
+    min-height: 100vh;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+.hero-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh;
+    padding: 20px;
+
+}
+/* إلغاء أي خلفية قديمة وتحديد مسافة مناسبة */
+.navbar {
+  padding: 15px 30px !important;
+  background: transparent !important;
+}
+
+/* تنسيق اللوجو */
+.navbar-brand {
+  color: #2b2b2b !important;
+  font-weight: 700 !important;
+  font-size: 1.8rem !important;
+}
+
+/* تنسيق روابط القائمة */
+.navbar-nav .nav-link {
+  color: #333333 !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem;
+  padding: 8px 16px !important;
+  transition: all 0.3s ease;
+}
+
+/* لون الرابط عند الوقوف عليه بالماوس (Hover) والرابط النشط (Active) */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #0288d1 !important; /* اللون السماوي المتناسق مع الزر */
+}
+/* حاوي الصفحة لضمان توسيط النموذج */
+.booking-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px); /* يراعي ارتفاع الناف بار */
+  padding: 40px 20px;
+}
+
+/* بطاقة حجز ملمومة في منتصف الصفحة */
+.booking-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  max-width: 850px;
+  width: 100%;
+}
+
+/* عنوان النموذج */
+.form-title {
+  text-align: center;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 25px;
+}
+
+/* تنسيق النصوص فوق الحقول */
+.form-label {
+  font-weight: 600;
+  color: #444444;
+  margin-bottom: 6px;
+}
+
+/* تنسيق حقول الإدخال والقوائم */
+.form-control, .form-select, .input-group-text {
+  border-radius: 10px;
+  padding: 10px 14px;
+  border: 1.5px solid #e0e0e0;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* تأثير الإضاءة السماوية عند التركيز على الحقل */
+.form-control:focus, .form-select:focus {
+  border-color: #29b6f6;
+  box-shadow: 0 0 0 0.25rem rgba(41, 182, 246, 0.25);
+}
+
+/* تنسيق زر الإرسال ليتطابق مع باقي أزرار الموقع */
+.btn-custom-submit {
+  background-color: #29b6f6;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-custom-submit:hover {
+  background-color: #0288d1;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(2, 136, 209, 0.3);
+}
+/* قسم الهيرو */
+.premium-hero {
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+/* بطاقات خطط الأسعار */
+.plan-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* الخطة المميزة */
+.plan-card.popular {
+  border: 2px solid #29b6f6;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.popular-tag {
+  position: absolute;
+  top: -15px;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: #29b6f6;
+  color: white;
+  padding: 4px 18px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.plan-title {
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.plan-price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #29b6f6;
+  margin-bottom: 25px;
+}
+
+.plan-price span {
+  font-size: 1rem;
+  color: #777;
+  font-weight: 400;
+}
+
+/* قائمة المميزات داخل البطاقة */
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.plan-features li {
+  padding: 10px 0;
+  border-bottom: 1px dashed #eee;
+  color: #555;
+  font-weight: 500;
+}
+
+/* أزرار الاشتراك */
+.btn-plan-outline {
+  border: 2px solid #29b6f6;
+  color: #29b6f6;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.btn-plan-outline:hover {
+  background-color: #29b6f6;
+  color: white;
+}
+
+.btn-plan-active {
+  background-color: #29b6f6;
+  color: white;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 12px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-plan-active:hover {
+  background-color: #0288d1;
+  box-shadow: 0 5px 15px rgba(2, 136, 209, 0.3);
+}
+
+
+.hero-section h1{
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.hero-section p{
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 25px;
+}
+.btn-primary{
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    background-color: #29b6f6;
+    color: beige;
+    border: none;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+.btn-primary:hover{
+    background-color: #0288d1;
+    transform: scale(1.05);
+}
+/* خلفية الصفحة الموحدة لتتماشى مع باقي الأقسام */
+
+
+/* تنسيق كارت الفيلم بتأثير الزجاج الشفاف */
+.movie-card {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 18px !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* تأثير التكبير الخفيف عند الوقوف على الكارت */
+.movie-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* توحيد ارتفاع البوستر وتقصيصه باحترافية */
+.img-wrapper {
+  height: 320px; /* يمكنك زيادة أو تقليل الارتفاع حسب الرغبة */
+  overflow: hidden;
+}
+
+.movie-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* يمنع تمدد أو تشوه بوستر الفيلم */
+  transition: transform 0.4s ease;
+}
+
+.movie-card:hover .movie-poster {
+  transform: scale(1.05); /* زوم خفيف للبوستر */
+}
+
+/* عناوين ونصوص الكارت */
+.movie-card .card-title {
+  color: #2c3e50;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.movie-card .card-text {
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+/* تنسيق زر الحجز المتناسق مع اللون السماوي */
+.btn-booking-card {
+  background-color: #29b6f6;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-booking-card:hover {
+  background-color: #0288d1;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(2, 136, 209, 0.3);
+}
+
+
+/* تنسيق بطاقة البروفايل بالزجاج الضبابي */
+.profile-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* صورة المستخدم والمعلومات */
+.avatar-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border: 3px solid #29b6f6;
+  padding: 3px;
+  background: #ffffff;
+}
+
+.profile-stats {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+}
+
+/* مصغرات التذاكر */
+.ticket-thumb {
+  width: 55px;
+  height: 65px;
+  object-fit: cover;
+}
+
+.booking-item {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+/* الأزرار المخصصة باللون السماوي */
+.btn-primary-custom, .bg-primary-custom {
+  background-color: #29b6f6 !important;
+  color: white !important;
+  border: none;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+  background-color: #0288d1 !important;
+  box-shadow: 0 4px 12px rgba(2, 136, 209, 0.3);
+}
+/* حاوي الصفحة لتوسيط البطاقة عمودياً وأفقياً */
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 90px); /* يراعي ارتفاع الناف بار */
+  padding: 20px;
+}
+
+/* بطاقة تسجيل الدخول الزجاجية */
+.auth-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px; /* تحديد عرض مناسب للنموذج */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* عناوين البطاقة */
+.auth-title {
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.auth-subtitle {
+  color: #6c757d;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* تنسيق النصوص فوق المدخلات */
+.form-label {
+  font-weight: 600;
+  color: #444444;
+  margin-bottom: 6px;
+}
+
+/* حقول الإدخال */
+.form-control, .input-group-text {
+  border-radius: 10px;
+  padding: 10px 14px;
+  border: 1.5px solid #e0e0e0;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* تأثير الإضاءة السماوية عند التحديد */
+.form-control:focus {
+  border-color: #29b6f6;
+  box-shadow: 0 0 0 0.25rem rgba(41, 182, 246, 0.25);
+}
+
+/* رابط نسيت كلمة السر */
+.forgot-link {
+  color: #0288d1;
+  font-size: 0.88rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* زر تسجيل الدخول السماوي الموحد */
+.btn-auth-submit {
+  background-color: #29b6f6;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-auth-submit:hover {
+  background-color: #0288d1;
+  color: #ffffff;
+  box-shadow: 0 5px 15px rgba(2, 136, 209, 0.3);
+}
+/* حاوي الصفحة لتوسيط البطاقة عمودياً وأفقياً */
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 90px); /* مراعاة مساحة الناف بار */
+  padding: 40px 20px;
+}
+
+/* بوكس إنشاء الحساب الزجاجي */
+.auth-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 460px; /* عرض متناسق يتناسب مع حقول التسجيل */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* عناوين بوكس التسجيل */
+.auth-title {
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.auth-subtitle {
+  color: #6c757d;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* أسماء الحقول */
+.form-label {
+  font-weight: 600;
+  color: #444444;
+  margin-bottom: 6px;
+  font-size: 0.92rem;
+}
+
+/* مدخلات النصوص والممرر */
+.form-control, .input-group-text {
+  border-radius: 10px;
+  padding: 10px 14px;
+  border: 1.5px solid #e0e0e0;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* إضاءة الحقول عند التركيز والتأديد */
+.form-control:focus {
+  border-color: #29b6f6;
+  box-shadow: 0 0 0 0.25rem rgba(41, 182, 246, 0.25);
+}
+
+/* روابط الشروط وتسجيل الدخول */
+.auth-link {
+  color: #0288d1;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+/* زر إنشاء الحساب السماوي الموحد */
+.btn-auth-submit {
+  background-color: #29b6f6;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-auth-submit:hover {
+  background-color: #0288d1;
+  color: #ffffff;
+  box-shadow: 0 5px 15px rgba(2, 136, 209, 0.3);
+}
+
+
+
+
+/* خلفية القائمة لما تفتح في الشاشات الصغيرة/الموبايل */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+  }
+}
